@@ -1,4 +1,10 @@
 import imgSrc from "../Assets/photo.jpeg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faFontAwesome,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 const Leftbar = () => {
   return (
     <div>
@@ -8,9 +14,32 @@ const Leftbar = () => {
       <div className="flex pl-10 text-white text-4xl">
         <h1>Jose Sanabria</h1>
       </div>
-      <h2 className="flex pl-10 pt-0.5 text-slate-500 text-xl">
+      <a
+        href="https://github.com/CodeMasterJose"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex pl-10 pt-0.5 text-slate-500 text-xl underline hover:no-underline"
+      >
+        <FontAwesomeIcon icon={faGithub} className="mr-2" />
         CodeMasterJose
-      </h2>
+      </a>
+      <a
+        href="https://www.linkedin.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex pl-10 pt-0.5 text-slate-500 text-xl underline hover:no-underline"
+      >
+        <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
+        LinkedIn
+      </a>
+      <a
+        href="mailto:jose117sanabri@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex pl-10 pt-0.5 text-slate-500 text-xl underline hover:no-underline"
+      >
+        Mail
+      </a>
     </div>
   );
 };

@@ -2,3 +2,7 @@
   border: 0.01rem solid #575353;
   padding: 1.5rem;
 }
+
+.backgroundCustom {
+  background-color: #282c34;
+}

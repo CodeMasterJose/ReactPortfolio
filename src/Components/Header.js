@@ -9,6 +9,7 @@ function Header(props) {
   const navItems = [
     { label: "Home", path: "/" },
     { label: "Portfolio", path: "/portfolio" },
+    { label: "Blog", path: "/blog" },
   ];
   const [breadcrumbs, setBreadcrumbs] = useState([]);
 
@@ -24,7 +25,8 @@ function Header(props) {
   }, [location]);
 
   return (
-    <div>
+    <div className="">
+      {/* top bar */}
       <div className="bg-stone-950">
         <div className="grid grid-cols-3 items-stretch p-4">
           {/* <div className="bg-gray-500">
@@ -55,18 +57,22 @@ function Header(props) {
         <Breadcrumb breadcrumbs={breadcrumbs} />
       </div>
       <div className="inline-block">{props.children}</div> */}
-      <div className="flex items-start">
-        <div className="min-h-screen w-1/4 bg-zinc-900 left-bar">
+      <div className="grid grid-cols-4 items-start bg-zinc-900">
+        <div className="col-span-1 h-full bg-zinc-900 left-bar flex-shrink-0">
           <Leftbar />
         </div>
-        <div className="min-h-screen w-3/4 bg-zinc-900 right-side">
+        <div className="min-h-screen col-span-3 bg-zinc-900 right-side">
           <div>
             <Breadcrumb breadcrumbs={breadcrumbs} />
           </div>
+          {/* displays children aka pages into header */}
           <div className="p-6">
             <div className="">{props.children}</div>
           </div>
         </div>
+      </div>
+      <div>
+        <h1>Bottom</h1>
       </div>
     </div>
   );
